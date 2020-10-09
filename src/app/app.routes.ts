@@ -1,14 +1,19 @@
+//Este clase permite entutar los componenetes a sus templates correspondientes
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { ContactoComponent } from './components/contacto/contacto.component';
-import { VenderComponent } from './components/vender/vender.component';
+import { ClientesComponent } from './components/clientes/clientes.component';
+import { InventarioComponent } from './components/inventario/inventario.component';
+import { ReporteValorInventarioComponent } from './components/reporte-valor-inventario/reporte-valor-inventario.component';
+import { TicketComponent } from './components/ticket/ticket.component';
+import { VentasComponent } from './components/ventas/ventas.component';
 
 const APP_ROUTES: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'contacto', component: ContactoComponent },
-  { path: 'vender', component: VenderComponent },
-  // Esta ruta es para seleccionemos un enlace sin ruta cualquiera.
-  { path: '**', pathMatch: 'full', redirectTo: 'home' }
+  { path: 'clientes', component: ClientesComponent },
+  { path: 'inventario', component: InventarioComponent },
+  { path: 'reportevalorinventario', component: ReporteValorInventarioComponent },
+  { path: 'ticket', component: TicketComponent },
+  { path: 'ventas', component: VentasComponent}
+//   // Esta ruta es para seleccionemos un enlace sin ruta cualquiera.
+//   { path: 'inicio', pathMatch: 'full', redirectTo: 'inicio' }
 ];
 
 export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);

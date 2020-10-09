@@ -2,11 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ClientesComponent } from './clientes/clientes.component';
-import { InventarioComponent } from './inventario/inventario.component';
-import { VentasComponent } from './ventas/ventas.component';
-import { TicketComponent } from './ticket/ticket.component';
-import { ReporteValorInventarioComponent } from './reporte-valor-inventario/reporte-valor-inventario.component';
+import { ClientesComponent } from './components/clientes/clientes.component';
+import { InventarioComponent } from './components/inventario/inventario.component';
+import { VentasComponent } from './components/ventas/ventas.component';
+import { TicketComponent } from './components/ticket/ticket.component';
+import { ReporteValorInventarioComponent } from './components/reporte-valor-inventario/reporte-valor-inventario.component';
+
+//importamos los routings
+import { APP_ROUTING } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { ReporteValorInventarioComponent } from './reporte-valor-inventario/repo
     ReporteValorInventarioComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    //AppRoutingModule,
+    APP_ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]
