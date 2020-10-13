@@ -1,24 +1,40 @@
-<router-outlet></router-outlet>
-<div>
-    <h1>Lista de clientes</h1>
-    <button class="btn btn-primary" routerLink="registra">Agregar</button><!---El routerLink = "registra" es como el identificado a la llamda del componente a mostrar--->
-    <table class="table">
-        <thead class="thead-light">
-            <tr>
-                <th scope="col">Clave</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Direccion</th>
-                <th scope="col">Telefono</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let cli of clientes"><!--Del arreglo clientes que declaramos en el clientes.component.ts, lo recorremos para cli y vamos mostrando los datos del cliente ne la tabla-->
-                <th scope="row">{{ cli.clave }}</th>
-                <td>{{ cli.nombre }}</td>
-                <td>{{ cli.direccion }}</td>
-                <td>{{ cli.telefono }}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de clientes</h1>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary" routerLink="registra">Agregar</button><!---El routerLink = "registra" es como el identificado a la llamda del componente a mostrar--->
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Clave</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Direccion</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Saldo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cli of clientes"><!--Del arreglo clientes que declaramos en el clientes.component.ts, lo recorremos para cli y vamos mostrando los datos del cliente ne la tabla-->
+                        <th scope="row">{{ cli.clave }}</th>
+                        <td>{{ cli.nombre }}</td>
+                        <td>{{ cli.direccion }}</td>
+                        <td>{{ cli.telefono }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</body>
+</html>
+
 
