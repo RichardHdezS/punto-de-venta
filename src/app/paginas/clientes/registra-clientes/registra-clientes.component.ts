@@ -11,16 +11,16 @@ import { DbService } from '../../../service/db.service';//importamos los servici
 })
 export class RegistraClientesComponent implements OnInit {
 
-  NuevoCliente:Cliente;
+  cliente:Cliente;
 
   constructor(private router:Router, private database:DbService) { }
 
   ngOnInit(): void {
-    this.NuevoCliente = new Cliente("", "", "", "", 0);//creamos un nuevo objeto para clientes
+    this.cliente = new Cliente("", "", "", "", 0);//creamos un nuevo objeto para clientes
   }
 
   onSubmit(form){
-    this.database.create_cliente(this.NuevoCliente);//una vez presionado el boton de registra se creara un nuevo cliente
+    this.database.create_cliente(this.cliente);//una vez presionado el boton de registra se creara un nuevo cliente
     this.router.navigate(['/clientes']);//regresamos a la visrta de clientes
   }
 

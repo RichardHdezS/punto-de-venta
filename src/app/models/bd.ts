@@ -1,3 +1,15 @@
+export class DB {
+
+    constructor(
+		public clientes: Cliente[],
+		public productos: Producto[],
+		public clasificaciones: Clasificacion[],
+		public ventas: Venta[],
+		public detVenta: VentaDetalle[],
+    ){}
+    
+}
+
 export class Cliente {
 	
 	constructor(

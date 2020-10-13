@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ClientesComponent } from './clientes.component';
+import { RegistraClientesComponent } from './registra-clientes/registra-clientes.component'//importamos el componente
 
 const routes : Routes = [
     {
@@ -10,6 +11,8 @@ const routes : Routes = [
         children: [
             {
                 //rutas hijas de clientes
+                path: 'registra',
+                component: RegistraClientesComponent
             },
         ]
     }
