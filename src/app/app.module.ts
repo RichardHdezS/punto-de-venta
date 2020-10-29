@@ -1,31 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-//Importamos las paginas
-import { ClientesComponent } from './paginas/clientes/clientes.component';
-import { InventarioComponent } from './paginas/inventario/inventario.component';
-import { VentasComponent } from './paginas/ventas/ventas.component';
-import { TicketComponent } from './paginas/ticket/ticket.component';
-import { ReporteValorInventarioComponent } from './paginas/reporte-valor-inventario/reporte-valor-inventario.component';
+import { HomeComponent } from './pages/home/home.component';
+import { EliminarComponent } from './pages/productos/eliminar/eliminar.component';
+import { ModificarComponent } from './pages/productos/modificar/modificar.component';
 
-//importamos los routings
-import { APP_ROUTING } from './app.routing';
-import { RegistraClientesComponent } from './paginas/clientes/registra-clientes/registra-clientes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClientesComponent,
-    InventarioComponent,
-    VentasComponent,
-    TicketComponent,
-    ReporteValorInventarioComponent,
-    RegistraClientesComponent
+    HomeComponent,
+   EliminarComponent,
+   ModificarComponent,
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
